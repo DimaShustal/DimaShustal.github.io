@@ -1,0 +1,214 @@
+@media (min-width: 336px) and (max-width: 768px) {
+	.content {
+		width: 305px;
+	}
+
+	.about {
+    	padding: 33px 0 42px;
+    	height: 648px;
+		text-align: center;
+		position: relative;
+
+		.content {
+    		flex-direction: column;
+    		align-items: center;
+		}
+
+		&__photo {
+		    @include border-radius(50%);
+		    width: 144px;
+		    height: 144px;
+		    position: absolute;
+		    top: 165px;
+		}
+
+		&__info {
+    		height: 100%;
+		}
+
+		&__description {
+		    font-size: 16px;
+		}
+
+		&__post {
+		    font-size: 16px;
+		}
+
+		&__name {
+	   		font-size: 32px;
+		}
+	}
+
+	.motivation {
+		margin: 105px 0 25px;
+
+		&__header {
+		    font-size: 32px;
+		}
+
+		&__list {
+			margin: 0;
+		}
+
+		&__item {
+			margin: 0;
+			width: 100%!important;
+    		height: auto;
+		}
+
+		&__item + &__item {
+			margin-top: 10px
+		}
+
+		&__title {
+			margin-bottom: 15px
+		}
+	}
+
+	.portfolio {
+		&__item {
+		    flex-direction: column;
+
+		    &__img {
+		    	order: 1;
+    			max-height: 215px;
+		    }
+
+		    &__info {
+			    flex-direction: column;
+			    margin-bottom: 20px;
+		    }
+
+		    &__description {
+			    margin-top: 20px;
+   				max-width: 410px;
+		    }
+		}
+
+		&__item + &__item {
+		    margin-top: 60px;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.content {
+		width: 705px;
+	}
+
+	.about {
+    	padding: 100px 0 145px;
+    	height: 1024px;
+		text-align: center;
+		position: relative;
+
+		.content {
+    		flex-direction: column;
+    		align-items: center;
+		}
+
+		&__photo {
+		    width: 384px;
+		    height: 384px;
+		    @include border-radius(50%);
+		    position: absolute;
+		    top: 225px;
+		}
+
+		&__info {
+    		padding: 0 82px;
+    		height: 100%;
+		}
+	}
+
+	.portfolio {
+		&__item {
+		    flex-direction: column;
+
+		    &__img {
+		    	order: 1;
+    			max-height: 495px;
+		    }
+
+		    &__info {
+    			margin-bottom: 20px;
+		    }
+
+		    &__description {
+   				max-width: 410px;
+		    }
+		}
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+	.about {
+		height: 670px;
+
+		&__photo {
+    		margin-left: -40px;
+		    flex: 0 0 425px;
+		}
+
+		&__info {
+    		padding: 65px 0 95px 95px;
+		}
+	}
+
+	.portfolio {
+		&__item {
+			height: 385px;
+
+			&:nth-child(2n){
+				.portfolio__item__img {
+		    		order: 1;
+				}
+
+				.portfolio__item__info {
+	    			padding: 0 95px 0 0;
+				}
+			}
+
+			&__info {
+	        	flex-direction: column;
+	    		padding: 0 0 0 95px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.about {
+		height: 670px;
+
+		&__photo {
+    		margin-left: -275px;
+    		flex: 0 0 550px;
+		}
+
+		&__info {
+    		padding: 65px 0 95px 95px;
+		}
+	}
+
+	.portfolio {
+		&__item {
+			height: 385px;
+
+			&:nth-child(2n){
+				.portfolio__item__img {
+		    		order: 1;
+				}
+
+				.portfolio__item__info {
+	    			padding: 0 95px 0 0;
+				}
+			}
+
+			&__info {
+	        	flex-direction: column;
+	    		padding: 0 0 0 95px;
+			}
+		}
+	}
+}

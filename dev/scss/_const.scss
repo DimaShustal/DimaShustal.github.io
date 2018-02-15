@@ -1,0 +1,16 @@
+%h1 {
+    font-family: 'Helvetica-Bold';
+    font-size: 40px;
+}
+
+%h2 {
+    font-family: 'Helvetica-Bold';
+	font-size: 24px;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}

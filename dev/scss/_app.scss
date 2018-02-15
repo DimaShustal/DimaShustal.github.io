@@ -1,0 +1,198 @@
+@font-face {
+	font-family: 'Georgia';
+	src: url('../font/Georgia/Georgia.eot'),
+	url('../font/Georgia/Georgia.woff') format('woff'),
+	url('../font/Georgia/Georgia.ttf') format('truetype'),
+	url('../font/Georgia/Georgia.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helvetica-Bold';
+	src: url('../font/Helvetica-Bold/Helvetica-Bold.eot'),
+	url('../font/Helvetica-Bold/Helvetica-Bold.woff') format('woff'),
+	url('../font/Helvetica-Bold/Helvetica-Bold.ttf') format('truetype'),
+	url('../font/Helvetica-Bold/Helvetica-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: Georgia, Arial;
+	font-size: 16px;
+	color: #000;
+}
+
+.content {
+	width: 945px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.about {
+	background: #082841;
+    color: #fff;
+
+	.content {
+  		display: flex;
+	}
+
+	&__photo {
+	    background-image: url(../img/my_photo.jpg);
+    	background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	}
+
+	&__info {
+	    display: flex;
+        flex-direction: column;
+    	justify-content: space-between;
+	}
+
+	&__post {
+	    @extend %h2;
+    	margin-bottom: 20px;
+	}
+
+	&__name {
+	    @extend %h1;
+	}
+
+	&__description {
+	    font-size: 20px;
+	    line-height: 28px;
+	}
+}
+
+.motivation {
+	margin: 105px 0 25px;
+
+	&__header {
+	    @extend %h1;
+    	margin-bottom: 40px;
+	}
+
+	&__title {
+	    @extend %h2;
+	}
+
+	&__list {
+	    display: flex;
+	    flex-wrap: wrap;
+	    align-content: stretch;
+	    margin: 0 -1% -2%;
+	}
+
+	&__item {
+	    background: #E6F0F0;
+	    height: 220px;
+	    padding: 30px;
+	    display: flex;
+        flex-direction: column;
+    	justify-content: space-between;
+    	margin: 0 1% 2%;
+
+    	&:nth-child(1),
+    	&:nth-child(4) {
+    		width: 53%;
+    	}
+
+    	&:nth-child(2),
+    	&:nth-child(3) {
+			width: 43%;
+    	}
+	}
+
+	&__description {
+		line-height: 24px;
+	}
+}
+
+.portfolio {
+    margin: 105px 0 25px;
+
+	&__header {
+	    @extend %h1;
+    	margin-bottom: 40px;
+	}
+
+	&__item + &__item {
+		margin-top: 130px;
+	}
+
+	&__item {
+		display: flex;
+
+		&__title {
+		    font-size: 24px;
+    		margin-bottom: 5px;
+		}
+
+		&__description {
+		    opacity: 0.8;
+    		line-height: 24px;
+		}
+
+		&__sub-title {
+			color: #DD3E18;
+			line-height: 24px;
+		}
+
+		&__img {
+			flex: 0 0 545px;
+    		box-shadow: 0 0 30px rgba(0,0,0,.4);
+		    background-repeat: no-repeat;
+		    background-size: auto 100%;
+    		background-position: center;
+
+    		&.stakers {
+	    		background-image: url(../img/stakers.png);
+    			background-position: 0 0;
+    		}
+
+    		&.taxi {
+	    		background-image: url(../img/taxi.png);
+    		}
+
+    		&.calendar {
+	    		background-image: url(../img/calendar.png);
+    		}
+		}
+
+		&__info {
+		    display: flex;
+	    	justify-content: space-between;
+		}
+	}
+}
+
+.contact {
+    margin-top: 105px;
+	background: #E6F0F0;
+    padding: 80px 0;
+
+	&__header {
+	    @extend %h1;
+	    margin-bottom: 40px;
+	}
+
+	&__item {
+		font-size: 16px;
+    	line-height: 30px;
+	    position: relative;
+	    padding-left: 20px;
+
+    	&:after {
+		    content: '';
+		    position: absolute;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    left: 0;
+		    width: 8px;
+		    height: 8px;
+		    border-radius: 50%;
+		    background: #082841;
+    	}
+	}
+}
