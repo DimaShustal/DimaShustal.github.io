@@ -1,2 +1,2 @@
 # DimaShustal.github.io
-Портфолио
+Портфолио доступно по адресу https://dimashustal.github.io/
